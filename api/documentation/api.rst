@@ -4,14 +4,10 @@
 
 OBTENER FRASES DE PERSONAJES (GET)
 -----------------------------------
-.. http:get:: /api/quotes
+.. http:get:: https://anime-hole.herokuapp.com/api/quotes
 
-**Ejemplo de petición**
 
-.. sourcecode:: http
-    GET /api/quotes HTTP/1.1
-
-**Ejemplo de respuesta**
+**Ejemplo de respuestas**
 
 .. sourcecode:: http
 
@@ -39,14 +35,9 @@ OBTENER FRASES DE PERSONAJES (GET)
 
 OBTENER IMAGENES DE WAIFUS (GET)
 -----------------------------------
-.. http:get:: /api/waifus
+.. http:get:: https://anime-hole.herokuapp.com/api/waifus
 
-**Ejemplo de petición**
-
-.. sourcecode:: http
-    GET /api/quotes HTTP/1.1
-
-**Ejemplo de respuesta**
+**Ejemplo de respuestas**
 
 .. sourcecode:: http
 
