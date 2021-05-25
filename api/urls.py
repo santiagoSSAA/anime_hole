@@ -16,5 +16,12 @@ Including another URLconf
 
 from django.urls import path
 
+from .views import AnimeImagesAPi
+from .views import AnimeQuotesApi
+from .views import main
+
 urlpatterns = [
+    path("quotes", AnimeQuotesApi.as_view()),
+    path("waifus", AnimeImagesAPi.as_view()),
+    path("home", main)
 ]

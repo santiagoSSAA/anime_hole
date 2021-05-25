@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+        }
+
+        .orly {
+            clip-path: circle(50% at 50% 50%);
+            background-color: white;
+            margin: auto;
+            width: 50%;
+            height: 50%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        body {
+            height: 100%;
+            width: 99%;
+            background: rgb(251, 187, 255);
+            overflow: hidden;
+        }
+
+        .circle {
+            border-radius: 50%;
+            margin: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+        }
+
+        .quote {
+            text-align: center;
+            font-size: 40px;
+            margin: 0px;
+        }
+
+        .author {
+            text-align: center;
+            font-size: 30px;
+            margin: 0px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 70px;
+            margin: 0px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(255, 255, 255);
+            border: solid 1px rgb(39, 39, 39);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: rgb(39, 39, 39);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: rgb(230, 230, 230);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">Api documentation</a></li>
+    </ul>
+    <br>
+    <h1 class="title">Frases de anime que el personaje nunca dijo</h1>
+    <img src="{{url}}" class="circle" alt="Avatar">
+    <h2 class="quote">{{data_1}}</h2>
+    <h3 class="author">{{data_2}}</h3>
+</body>
+
+</html>
