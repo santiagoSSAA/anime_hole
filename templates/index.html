@@ -10,17 +10,6 @@
         * {
             font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
         }
-
-        .orly {
-            clip-path: circle(50% at 50% 50%);
-            background-color: white;
-            margin: auto;
-            width: 50%;
-            height: 50%;
-            padding: 10px;
-            text-align: center;
-        }
-
         body {
             height: 100%;
             width: 99%;
@@ -39,13 +28,13 @@
 
         .quote {
             text-align: center;
-            font-size: 40px;
+            font-size: 30px;
             margin: 0px;
         }
 
         .author {
             text-align: center;
-            font-size: 30px;
+            font-size: 20px;
             margin: 0px;
         }
 
@@ -79,19 +68,58 @@
         li a:hover {
             background-color: rgb(230, 230, 230);
         }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10%;
+        }
+
+        .button1 {
+            background-color: #c33636;
+            margin: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Green */
+        .button2 {
+            background-color: #008CBA;
+            margin: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Blue */
     </style>
 </head>
 
 <body>
     <ul>
         <li><a class="active" href="https://anime-hole.herokuapp.com/api/home">Home</a></li>
-        <li><a href="https://github.com/santiagoSSAA/anime_hole/blob/main/api/documentation/api.rst">Api documentation</a></li>
+        <li><a href="https://github.com/santiagoSSAA/anime_hole/blob/main/api/documentation/api.rst">Api
+                documentation</a></li>
     </ul>
     <br>
-    <h1 class="title">Frases de anime que el personaje nunca dijo</h1>
+    <h1 class="title">{{title}}</h1>
     <img src="{{url}}" class="circle" alt="Avatar">
     <h2 class="quote">{{data_1}}</h2>
     <h3 class="author">{{data_2}}</h3>
+
+    <br>
+    <button class="button button1" onclick="location.href='/api/home/nsfw'">Ver personajes NSFW</button>
+    <br>
+    <button class="button button2" onclick="location.href='/api/home'">Ver personajes SFW</button>
+
 </body>
 
 </html>

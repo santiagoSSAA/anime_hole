@@ -18,10 +18,12 @@ from django.urls import path
 
 from .views import AnimeImagesAPi
 from .views import AnimeQuotesApi
-from .views import main
+from .views import main, nsfw
+
 
 urlpatterns = [
     path("quotes", AnimeQuotesApi.as_view()),
     path("waifus", AnimeImagesAPi.as_view()),
-    path("home", main)
+    path("home", main),
+    path("home/nsfw", nsfw)
 ]

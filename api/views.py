@@ -60,6 +60,24 @@ def main(request):
     content = {
         "data_1": quote,
         "data_2": f"-{owner}",
-        "url": url
+        "url": url,
+        "title": "Frases de anime que el personaje nunca dijo"
+    }
+    return TemplateResponse(request, html, context=content)
+
+def nsfw(request):
+    response_waifu = requests.get("https://api.waifu.pics/sfw/cringe")
+    if response_waifu.status_code != 200:
+        html = f"<html><body>quote español{response_waifu.status_code} - {response_waifu.text}</body></html>"
+        return HttpResponse(html)
+
+    url = response_waifu.json()["url"]
+
+    html = settings.BASE_DIR + "/templates/index.html"
+    content = {
+        "data_1": "Never gonna give you up, never gonna let you down",
+        "data_2": "-Rick Astley",
+        "url": url,
+        "title": "Solo te metiste por la imagen, a mi no me mientan puercos"
     }
     return TemplateResponse(request, html, context=content)
