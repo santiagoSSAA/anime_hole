@@ -25,5 +25,5 @@ urlpatterns = [
     path("quotes", AnimeQuotesApi.as_view()),
     path("waifus", AnimeImagesAPi.as_view()),
     path("home", main),
-    path("home/nsfw", nsfw)
+    path("home/nsfw/<int:fun>", nsfw)
 ]

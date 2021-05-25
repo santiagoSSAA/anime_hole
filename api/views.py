@@ -65,8 +65,11 @@ def main(request):
     }
     return TemplateResponse(request, html, context=content)
 
-def nsfw(request):
-    response_waifu = requests.get("https://api.waifu.pics/sfw/cringe")
+def nsfw(request, fun):
+    if fun == 69:
+        response_waifu = requests.get("https://api.waifu.pics/nsfw/waifu")
+    else:
+        response_waifu = requests.get("https://api.waifu.pics/sfw/cringe")
     if response_waifu.status_code != 200:
         html = f"<html><body>quote español{response_waifu.status_code} - {response_waifu.text}</body></html>"
         return HttpResponse(html)
@@ -75,7 +78,11 @@ def nsfw(request):
 
     html = settings.BASE_DIR + "/templates/index.html"
     content = {
-        "data_1": "Never gonna give you up, never gonna let you down",
+        "data_1": ("Never gonna give you up, never gonna let you down, "
+            "Never gonna run around and desert you, "
+            "Never gonna make you cry, "
+            "Never gonna say goodbye, "
+            "Never gonna tell a lie and hurt you"),
         "data_2": "-Rick Astley",
         "url": url,
         "title": "Solo te metiste por la imagen, a mi no me mientan puercos"
