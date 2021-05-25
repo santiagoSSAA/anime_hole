@@ -85,6 +85,6 @@ def nsfw(request, fun):
             "Never gonna tell a lie and hurt you"),
         "data_2": "-Rick Astley",
         "url": url,
-        "title": "Solo te metiste por la imagen, a mi no me mientan puercos"
+        "title": "Solo te metiste por la imagen, a mi no me mientas"
     }
     return TemplateResponse(request, html, context=content)
